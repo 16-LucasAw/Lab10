@@ -95,5 +95,22 @@ namespace Tests
             result = Mathf.Sqrt(9);
             Assert.AreEqual(result, 3);
         }
+
+        //Test Power
+        [Test]
+        public void TestPower()
+        {
+            result = Mathf.Pow(5, 2);
+            Assert.AreEqual(result, 25);
+        }
+
+        [UnityTest]
+        public IEnumerator TestUnityPower()
+        {
+            yield return null;
+
+            result = Mathf.Pow(5, 2);
+            Assert.AreEqual(result, 25);
+        }
     }
 }
