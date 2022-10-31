@@ -78,5 +78,22 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "*");
             Assert.AreEqual(result, 10);
         }
+
+        //Test SquareRoot
+        [Test]
+        public void TestSquareRoot()
+        {
+            result = Mathf.Sqrt(9);
+            Assert.AreEqual(result, 3);
+        }
+
+        [UnityTest]
+        public IEnumerator TestUnitySquareRoot()
+        {
+            yield return null;
+
+            result = Mathf.Sqrt(9);
+            Assert.AreEqual(result, 3);
+        }
     }
 }
