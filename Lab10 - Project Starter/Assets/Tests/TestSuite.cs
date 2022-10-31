@@ -11,6 +11,7 @@ namespace Tests
 
         private float result = 0.0f;
 
+        // Test Addition
         [Test]
         public void TestAddition()
         {
@@ -27,6 +28,7 @@ namespace Tests
             Assert.AreEqual(result, 7);
         }
 
+        // Test Subtraction
         [Test]
         public void TestSubtraction()
         {
@@ -41,6 +43,23 @@ namespace Tests
 
             result = Calculator.CalculatePair(5, 2, "-");
             Assert.AreEqual(result, 3);
+        }
+
+        // Test Division
+        [Test]
+        public void TestDivision()
+        {
+            result = Calculator.CalculatePair(5, 2, "/");
+            Assert.AreEqual(result, 2.5f);
+        }
+
+        [UnityTest]
+        public IEnumerator TestUnityDivision()
+        {
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "/");
+            Assert.AreEqual(result, 2.5f);
         }
     }
 }
